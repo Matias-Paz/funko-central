@@ -1,0 +1,82 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Bold.woff2') format('woff2'),
+        url('../fonts/Poppins-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Regular.woff2') format('woff2'),
+        url('../fonts/Poppins-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Heroik';
+    src: url('../fonts/Heroik.woff2') format('woff2'),
+        url('../fonts/Heroik.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+}
+
+.nav__checkbox:checked+.nav__label .nav__menu--show {
+    @apply scale-0;
+}
+
+.nav__checkbox:checked+.nav__label .nav__menu--hidden {
+    @apply scale-100;
+
+}
+
+.nav__checkbox:not(:checked)+.nav__label .nav__menu--show {
+    @apply scale-100;
+}
+
+.nav__checkbox:checked~.nav__items {
+    pointer-events: all;
+    transform: unset;
+    transition: opacity 1s, transform 1s ease-out;
+    @apply opacity-100;
+}
+
+.word-spacing {
+    word-spacing: 6px;
+}
+
+.section__img {
+    animation: translate 2s infinite;
+}
+
+.link:hover img {
+    @apply brightness-0 saturate-[100%]
+}
+
+
+@keyframes translate {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
