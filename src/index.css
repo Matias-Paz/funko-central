@@ -25,6 +25,11 @@
     font-display: swap;
 }
 
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
     scroll-behavior: smooth;
     color-scheme: dark;
@@ -46,7 +51,7 @@
 .nav__checkbox:checked~.nav__items {
     pointer-events: all;
     transform: unset;
-    transition: opacity 1s, transform 1s ease-out;
+    /* transition: opacity 1s, transform 1s ease-out; */
     @apply opacity-100;
 }
 
@@ -69,14 +74,10 @@
     }
 
     50% {
-        transform: translateY(-20px);
+        transform: translateY(-40px);
     }
 
     100% {
         transform: translateY(0);
     }
 }
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;

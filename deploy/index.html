@@ -1,399 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <link rel="icon" type="image/svg+xml" href="./img/logo.svg">
-    <link rel="icon" type="image/png" href="./img/logo.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta
-      name="description"
-      content="Welcome to Funko Pop Central! We are your ultimate destination for all things Funko Pop. Explore our vast collection of Funko Pop figures, including rare and exclusive editions. Discover your favorite characters from movies, TV shows, video games, and more. Whether you're a collector or a fan, we have something for everyone. Shop now and add some Funko Pop magic to your collection."
-    >
-    <meta name="keywords" content="Funko Pop, Funko Pop Central">
-    <meta name="author" content="Matías Paz">
 
-    <!-- Preload -->
-    <link rel="preload" href="./css/style.css" as="style">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="./img/logo.svg">
+  <link rel="icon" type="image/png" href="./img/logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Welcome to Funko Pop Central! We are your ultimate destination for all things Funko Pop. Explore our vast collection of Funko Pop figures, including rare and exclusive editions. Discover your favorite characters from movies, TV shows, video games, and more. Whether you're a collector or a fan, we have something for everyone. Shop now and add some Funko Pop magic to your collection.">
+  <meta name="keywords" content="Funko Pop, Funko Pop Central">
+  <meta name="author" content="Matías Paz">
 
-    <link rel="stylesheet" href="./css/style.css">
+  <!-- Preload -->
+  <link rel="preload" href="./css/style.css" as="style">
 
-    <title>Funko Central | Online Shop</title>
+  <link rel="stylesheet" href="./css/style.css">
 
-    <script src="JS/nav.js" defer></script>
-  </head>
+  <title>Funko Central | Online Shop</title>
 
-  <body class="font-poppins">
-    <header
-      class="flex justify-center align-middle md:h-[64px] py-3 text-white fixed z-100 w-screen transition ease-linear duration-1000 items-center"
-    >
-      <div
-        class="max-w-7xl display: flex w-11/12 mx-auto items-center gap-3 md:gap-0 justify-between"
-      >
-        <a href="https://funko-central.netlify.app/" class="display: flex flex-row gap-4">
-          <img class="w-9 lg:w-10" src="./img/logo.svg" alt="logo">
-          <h1 class="text-2xl lg:text-3xl font-heroik w-44">Funko Central</h1>
+  <script src="JS/nav.js" defer></script>
+</head>
+
+<body class="font-poppins">
+  <header
+    class="flex justify-center align-middle h-[64px] py-3 text-white fixed z-100 w-screen transition-colors ease-linear duration-1000 items-center">
+    <div class="max-w-7xl display: flex w-11/12 mx-auto items-center gap-3 md:gap-0 justify-between">
+      <a href="https://funko-central.netlify.app/" class="display: flex flex-row gap-4">
+        <img class="w-9 lg:w-10" src="./img/logo.svg" alt="logo">
+        <h1 class="text-2xl lg:text-3xl font-heroik w-44">Funko Central</h1>
+      </a>
+      <div class="flex w-max gap-5 md:gap-0 lg:gap-5 items-center">
+        <a aria-label="shopping" class="w-10 md:order-2 link p-2 flex h-max hover:bg-white"
+          rel="noopener noreferrer" href="https://github.com/Matias-Paz" target="_blank">
+          <img class="" src="img/carrito.svg" alt="icon shopping">
         </a>
-        <div class="flex w-max gap-5 md:gap-0 lg:gap-5 items-center">
-          <a
-            aria-label="shopping"
-            class="w-10 md:order-2 link p-2 flex h-max hover:bg-white"
-            rel="noopener noreferrer"
-            href="https://github.com/Matias-Paz"
-            target="_blank"
-          >
-            <img src="img/carrito.svg" alt="shopping">
+
+        <input type="checkbox" id="menu" class="hidden nav__checkbox" aria-label="menu">
+        <label for="menu"
+          class="grid cursor-pointer w-8 h-8 overflow-hidden nav__label nav--opacity items-center md:hidden">
+          <span class="col-1/2 row-1/2 nav__menu nav__menu--show">
+            <svg class="nav__svg" stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path
+                d="M2 6C2 5.44772 2.44772 5 3 5H21C21.5523 5 22 5.44772 22 6C22 6.55228 21.5523 7 21 7H3C2.44772 7 2 6.55228 2 6Z"
+                fill="currentColor"></path>
+              <path
+                d="M2 12.0322C2 11.4799 2.44772 11.0322 3 11.0322H21C21.5523 11.0322 22 11.4799 22 12.0322C22 12.5845 21.5523 13.0322 21 13.0322H3C2.44772 13.0322 2 12.5845 2 12.0322Z"
+                fill="currentColor"></path>
+              <path
+                d="M3 17.0645C2.44772 17.0645 2 17.5122 2 18.0645C2 18.6167 2.44772 19.0645 3 19.0645H21C21.5523 19.0645 22 18.6167 22 18.0645C22 17.5122 21.5523 17.0645 21 17.0645H3Z"
+                fill="currentColor"></path>
+            </svg>
+          </span>
+          <span class="col-1/2 row-1/2 scale-0 nav__menu nav__menu--hidden">
+            <svg class="nav__svg" stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path
+                d="M6.2253 4.81108C5.83477 4.42056 5.20161 4.42056 4.81108 4.81108C4.42056 5.20161 4.42056 5.83477 4.81108 6.2253L10.5858 12L4.81114 17.7747C4.42062 18.1652 4.42062 18.7984 4.81114 19.1889C5.20167 19.5794 5.83483 19.5794 6.22535 19.1889L12 13.4142L17.7747 19.1889C18.1652 19.5794 18.7984 19.5794 19.1889 19.1889C19.5794 18.7984 19.5794 18.1652 19.1889 17.7747L13.4142 12L19.189 6.2253C19.5795 5.83477 19.5795 5.20161 19.189 4.81108C18.7985 4.42056 18.1653 4.42056 17.7748 4.81108L12 10.5858L6.2253 4.81108Z"
+                fill="currentColor"></path>
+            </svg>
+          </span>
+        </label>
+
+        <nav
+          class="opacity-0 md:opacity-100 translate-x-[-100%] md:translate-x-0 pointer-events-none nav__items bg-black md:bg-transparent fixed inset-64px md:pointer-events-auto md:relative md:inset-0px md:cursor-pointer transition ease-linear duration-1000 uppercase font-bold"
+          aria-label="menu">
+          <ul class="display: grid md:flex font-bolduppercase justify-center text-center max-w-7xl w-11/12 md:w-max mx-auto auto-cols-100 pb-4 md:pb-0 lg:gap-[3vw] md:translate-x-0 nav__lists">
+            <li>
+              <a class="nav-item block py-2 px-4 hover:bg-white hover:text-black" href="#home"
+                aria-label="Home">Home</a>
+            </li>
+            <li>
+              <a class="nav-item block py-2 px-4 hover:bg-white hover:text-black word-spacing" href="#collection"
+                aria-label="Collection">Collection</a>
+            </li>
+            <li>
+              <a class="nav-item block py-2 px-4 hover:bg-white hover:text-black word-spacing" href="#subscription"
+                aria-label="Subscription">Subscription</a>
+            </li>
+            <li>
+              <a class="nav-item block py-2 px-4 hover:bg-white hover:text-black" href="#contact"
+                aria-label="Contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section id="home"
+    class="overflow-hidden min-h-screen p-16 bg-gradient-to-r from-cyan-800 to-blue-800 flex text-white items-center justify-around gap-4 flex-wrap">
+    <img class="section__img h-[70vh] object-contain" src="img/harry-potter.webp" alt="funko pop harry potter">
+    <div class="grid gap-4 lg:gap-6 flex-400 max-w-xl">
+      <h2 class="font-bold uppercase text-2xl md:text-3xl lg:text-4xl">
+        Bring Your Favorite Sorcerers Home
+      </h2>
+      <p class="lg:text-xl">
+        At Funko Central, you can have fun and start your amazing collection of Funkos!
+      </p>
+      <a class="bg-black text-white text-center rounded-3xl py-2 w-3/4 max-w-xs hover:bg-white hover:text-black border-2 border-white hover:border-black"
+        href="#">Shop Now</a>
+    </div>
+  </section>
+
+  <section id="collection" class="overflow-hidden bg-indigo-700 text-white">
+    <div class="flex flex-col">
+      <div class="flex">
+        <img class="object-cover w-[25vw]" src="img/1.webp" alt="funko pop collector couple" loading="lazy"
+          aria-label="Funko Pop Collector Couple">
+        <img class="object-cover w-[25vw]" src="img/2.webp" alt="man with many funko pops" loading="lazy"
+          aria-label="Man with Many Funko Pops">
+        <img class="object-cover w-[25vw]" src="img/3.webp" alt="man with giant funko" loading="lazy"
+          aria-label="Man with Giant Funko">
+        <img class="object-cover w-[25vw]" src="img/4.webp" alt="man with funko" loading="lazy"
+          aria-label="Man with Funko">
+      </div>
+      <div class="md:flex justify-center align-middle">
+        <div class="flex flex-col justify-center align-middle gap-4 lg:gap-6 md:order-2 p-16">
+          <h2 class="font-bold uppercase text-2xl md:text-3xl lg:text-4xl">
+            Join Collectors Around the World and Live with Funkos
+          </h2>
+          <p class="lg:text-xl">
+            No matter your age or tastes, at Funko Central, we have the best collectibles just the way you like it!
+          </p>
+          <a class="bg-black text-white text-center rounded-3xl py-2 w-3/4 max-w-xs hover:bg-white hover:text-black border-2 border-white hover:border-black"
+            href="#">Be a Collector</a>
+        </div>
+        <div class="flex md:grid overflow-hidden min-w-[25vw] md:w-[50vw] md:grid-cols-2">
+          <img class="min-h-full object-cover w-[25vw]" src="img/5.webp" alt="woman with funko" loading="lazy"
+            aria-label="Woman with Funko">
+          <img class="min-h-full col-start-2 col-end-2 object-cover w-[25vw]" src="img/6.webp"
+            alt="woman with three funko" loading="lazy" aria-label="Woman with Three Funkos">
+          <img class="min-h-full object-cover w-[25vw]" src="img/8.webp" alt="man with five funko" loading="lazy"
+            aria-label="Man with Five Funkos">
+          <img class="min-h-full col-start-2 col-end-2 object-cover w-[25vw]" src="img/7.webp"
+            alt="woman with harry potter funko pop" loading="lazy" aria-label="Woman with Harry Potter Funko Pop">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="subscription"
+    class="overflow-hidden flex text-white relative p-16 justify-around gap-10 flex-wrap h-max">
+    <img class="absolute inset-0px z-less min-h-full object-cover w-screen" src="img/Colors.webp"
+      alt="colorful background">
+
+    <div class="relative block w-full max-w-xl xl:order-2">
+      <img class="h-85 my-auto opacity-0 sm:opacity-100 absolute z-less inset-y-l-0" src="img/Left.webp"
+        alt="sasuke funko pop">
+      <img class="h-85 my-auto opacity-0 sm:opacity-100 absolute z-less inset-y-r-0" src="img/Right.webp"
+        alt="gaara funko pop">
+      <img class="h-100 section__img flex mx-auto" src="img/Center.webp" loading="lazy" alt="naruto funko pop">
+    </div>
+
+    <div class="grid gap-4 lg:gap-6 flex-250">
+      <h2 class="font-bold uppercase text-2xl md:text-3xl lg:text-4xl">
+        Subscribe to Our Exclusive Newsletter
+      </h2>
+      <p class="lg:text-xl">
+        Stay on top of the news from the world of Funkos by subscribing to our exclusive newsletter!
+      </p>
+      <form class="grid gap-4 lg:gap-4">
+        <label class="font-bold" for="email">Email:</label>
+        <input
+          class="w-5/6 bg-transparent border-white border-2 outline-none rounded-lg py-2 px-4 placeholder:text-white valid:border-green-500"
+          type="email" name="email" id="email" placeholder="example@example.com"
+          pattern="[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+" required aria-label="Email">
+        <!--Campo correo: Solo puedetener letras, números, puntos, guiones y guion bajo. El símbolo arroba (@), luego letras, números, guiones. A continuación, el punto (.) y finalmente letras, números, puntos y guiones -->
+
+        <input
+          class="text-center rounded-3xl py-2 w-3/4 max-w-xs hover:bg-white hover:text-black bg-black text-white cursor-pointer capitalize border-2 border-white hover:border-black"
+          type="submit" value="Subscribe">
+      </form>
+      <div class="flex gap-4 flex-wrap">
+        <img src="img/App-Store.webp" alt="logo app store" loading="lazy" aria-label="App Store">
+        <img src="img/Google-Play.webp" alt="logo google play" loading="lazy" aria-label="Google Play">
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact" class="bg-black">
+    <div class="p-16 grid gap-4">
+      <a class="w-1/2 max-w-[150px]" href="https://funko-central.netlify.app/">
+        <img src="img/logo.svg" loading="lazy" alt="logo">
+      </a>
+
+      <div class="flex justify-between flex-wrap gap-8">
+        <div class="flex gap-8 justify-around h-[min-content]">
+          <a rel="noopener" href="tel:+99-99-9999-9999" target="_blank"
+            class="link p-2.5 flex rounded-full bg-blue-600 h-max hover:bg-white">
+            <img src="img/icon-phone.svg" alt="icon phone" class="block min-w-[30px] h-16" loading="lazy"
+              aria-label="Phone Icon">
           </a>
 
-          <input
-            type="checkbox"
-            id="menu"
-            class="hidden nav__checkbox"
-            aria-label="menú principal"
-          >
-          <label
-            for="menu"
-            class="grid cursor-pointer w-8 h-8 overflow-hidden nav__label nav--opacity items-center md:hidden"
-          >
-            <span class="col-1/2 row-1/2 nav__menu nav__menu--show">
-              <svg
-                class="nav__svg"
-                stroke="currentColor"
-                fill="none"
-                stroke-width="0"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M2 6C2 5.44772 2.44772 5 3 5H21C21.5523 5 22 5.44772 22 6C22 6.55228 21.5523 7 21 7H3C2.44772 7 2 6.55228 2 6Z"
-                  fill="currentColor"
-                ></path>
-                <path
-                  d="M2 12.0322C2 11.4799 2.44772 11.0322 3 11.0322H21C21.5523 11.0322 22 11.4799 22 12.0322C22 12.5845 21.5523 13.0322 21 13.0322H3C2.44772 13.0322 2 12.5845 2 12.0322Z"
-                  fill="currentColor"
-                ></path>
-                <path
-                  d="M3 17.0645C2.44772 17.0645 2 17.5122 2 18.0645C2 18.6167 2.44772 19.0645 3 19.0645H21C21.5523 19.0645 22 18.6167 22 18.0645C22 17.5122 21.5523 17.0645 21 17.0645H3Z"
-                  fill="currentColor"
-                ></path>
-              </svg>
-            </span>
-            <span class="col-1/2 row-1/2 scale-0 nav__menu nav__menu--hidden">
-              <svg
-                class="nav__svg"
-                stroke="currentColor"
-                fill="none"
-                stroke-width="0"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M6.2253 4.81108C5.83477 4.42056 5.20161 4.42056 4.81108 4.81108C4.42056 5.20161 4.42056 5.83477 4.81108 6.2253L10.5858 12L4.81114 17.7747C4.42062 18.1652 4.42062 18.7984 4.81114 19.1889C5.20167 19.5794 5.83483 19.5794 6.22535 19.1889L12 13.4142L17.7747 19.1889C18.1652 19.5794 18.7984 19.5794 19.1889 19.1889C19.5794 18.7984 19.5794 18.1652 19.1889 17.7747L13.4142 12L19.189 6.2253C19.5795 5.83477 19.5795 5.20161 19.189 4.81108C18.7985 4.42056 18.1653 4.42056 17.7748 4.81108L12 10.5858L6.2253 4.81108Z"
-                  fill="currentColor"
-                ></path>
-              </svg>
-            </span>
-          </label>
-
-          <nav
-            class="opacity-0 md:opacity-100 transition-opacity ease-linear duration-1000 pointer-events-none nav__items bg-black md:bg-transparent fixed inset-56px md:pointer-events-auto md:relative md:inset-0px md:cursor-pointer"
-          >
-            <ul
-              class="display: grid md:flex font-bold uppercase justify-center text-center max-w-7xl w-11/12 md:w-max mx-auto auto-cols-100 pb-4 md:pb-0 lg:gap-[3vw]"
-            >
-              <li>
-                <a
-                  class="nav-item block py-2 px-4 hover:bg-white hover:text-black"
-                  href="#home"
-                  >Home</a
-                >
-              </li>
-              <li>
-                <a
-                  class="nav-item block py-2 px-4 hover:bg-white hover:text-black word-spacing"
-                  href="#collection"
-                  >collection</a
-                >
-              </li>
-              <li>
-                <a
-                  class="nav-item block py-2 px-4 hover:bg-white hover:text-black word-spacing"
-                  href="#subscription"
-                  >subscription</a
-                >
-              </li>
-              <li>
-                <a
-                  class="nav-item block py-2 px-4 hover:bg-white hover:text-black"
-                  href="#contact"
-                  >Contact</a
-                >
-              </li>
-            </ul>
-          </nav>
+          <a href="mailto:example@example.com" class="link p-2.5 flex rounded-full bg-blue-600 h-max hover:bg-white"
+            rel="noopener">
+            <img src="img/icon-email.svg" alt="icon email" loading="lazy" class="block min-w-[30px] h-16"
+              aria-label="Email Icon">
+          </a>
+          <a href="https://github.com/Matias-Paz" target="_blank" rel="noopener"
+            class="link p-2.5 flex rounded-full bg-blue-600 h-max hover:bg-white">
+            <img src="img/instagram.svg" alt="icon instagram" loading="lazy" class="block min-w-[30px] h-16"
+              aria-label="Instagram Icon">
+          </a>
         </div>
+
+        <nav class="w-1/2 flex-[200px] max-w-xs" aria-label="menu">
+          <ul class="grid gap-2">
+            <li>
+              <a class="block hover:text-black hover:bg-white py-1 px-4 uppercase font-bold" href="#home"
+                aria-label="Home">Home</a>
+            </li>
+            <li>
+              <a class="block hover:text-black hover:bg-white py-1 px-4 uppercase font-bold" href="#collection"
+                aria-label="Collection">Collection</a>
+            </li>
+            <li>
+              <a class="block hover:text-black hover:bg-white py-1 px-4 uppercase font-bold" href="#subscription"
+                aria-label="Subscription">Subscription</a>
+            </li>
+            <li>
+              <a class="block hover:text-black hover:bg-white py-1 px-4 uppercase font-bold" href="#contact"
+                aria-label="Contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
       </div>
-    </header>
+    </div>
+    <a href="https://github.com/Matias-Paz" target="_blank" rel="noopener"
+      class="block text-center bg py-4 font-bold px-8 bg-gradient-to-r bg-blue-600">
+      &copy; 2023 Funko Central - MatiasDesign - All rights reserved
+    </a>
+  </footer>
+</body>
 
-    <section
-      id="home"
-      class="overflow-hidden min-h-screen p-16 bg-gradient-to-r from-cyan-500 to-blue-500 flex text-white items-center justify-around gap-4 flex-wrap"
-    >
-      <img
-        class="section__img h-70vh object-contain"
-        src="img/harry-potter.webp"
-        alt="funko pop harry potter"
-      >
-      <div class="grid gap-4 lg:gap-6 flex-400 max-w-xl">
-        <h2 class="font-bold uppercase text-2xl md:text-3xl lg:text-4xl">
-          Bring your favorite sorcerers home
-        </h2>
-        <p class="lg:text-xl">
-          At Funko Central you have fun and start your amazing collection of
-          Funkos!
-        </p>
-        <a
-          class="bg-black text-center rounded-3xl py-2 w-3/4 max-w-xs hover:bg-white hover:text-black border-2 border-white hover:border-black"
-          href="#"
-          >Shop now</a
-        >
-      </div>
-    </section>
-
-    <section
-      id="collection"
-      class="overflow-hidden bg-gradient-to-r from-sky-500 to-indigo-500 text-white"
-    >
-      <div class="flex flex-col">
-        <div class="flex">
-          <img
-            class="object-cover w-[25vw]"
-            src="img/1.webp"
-            alt="funko pop collectors"
-            loading="lazy"
-          >
-          <img
-            class="object-cover w-[25vw]"
-            src="img/2.webp"
-            alt="funko pop collectors"
-            loading="lazy"
-          >
-          <img
-            class="object-cover w-[25vw]"
-            src="img/3.webp"
-            alt="funko pop collectors"
-            loading="lazy"
-          >
-          <img
-            class="object-cover w-[25vw]"
-            src="img/4.webp"
-            alt="funko pop collectors"
-            loading="lazy"
-          >
-        </div>
-        <div class="md:flex justify-center align-middle">
-          <div
-            class="flex flex-col justify-center align-middle gap-4 lg:gap-6 md:order-2 p-16"
-          >
-            <h2 class="font-bold uppercase text-2xl md:text-3xl lg:text-4xl">
-              Join collectors around the world and live with funkos
-            </h2>
-            <p class="lg:text-xl">
-              No matter your age or tastes, at Funko Central we have the best
-              collectibles just the way you like it!
-            </p>
-            <a
-              class="bg-black text-center rounded-3xl py-2 w-3/4 max-w-xs hover:bg-white hover:text-black border-2 border-white hover:border-black"
-              href="#"
-              >Be collector</a
-            >
-          </div>
-          <div
-            class="flex md:grid overflow-hidden min-w-[25vw] md:w-[50vw] md:grid-cols-2"
-          >
-            <img
-              class="min-h-full object-cover w-[25vw]"
-              src="img/5.webp"
-              alt="funko pop collectors"
-              loading="lazy"
-            >
-            <img
-              class="min-h-full col-start-2 col-end-2 object-cover w-[25vw]"
-              src="img/6.webp"
-              alt="funko pop collectors"
-              loading="lazy"
-            >
-            <img
-              class="min-h-full object-cover w-[25vw]"
-              src="img/8.webp"
-              alt="funko pop collectors"
-              loading="lazy"
-            >
-            <img
-              class="min-h-full col-start-2 col-end-2 object-cover w-[25vw]"
-              src="img/7.webp"
-              alt="funko pop collectors"
-              loading="lazy"
-            >
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section
-      id="subscription"
-      class="overflow-hidden flex text-white relative p-16 justify-around gap-10 flex-wrap h-max"
-    >
-      <img
-        class="absolute inset-0px z-less min-h-full object-cover w-screen"
-        src="img/Colors.webp"
-        alt="fondo de colores"
-      >
-      <div class="relative block w-full max-w-xl xl:order-2">
-        <img
-          class="h-85 my-auto opacity-0 sm:opacity-100 absolute z-less inset-y-l-0"
-          src="img/Left.webp"
-          alt="sasuke funko pop"
-        >
-        <img
-          class="h-85 my-auto opacity-0 sm:opacity-100 absolute z-less inset-y-r-0"
-          src="img/Right.webp"
-          alt="gaara funko pop"
-        >
-        <img
-          class="h-100 section__img flex mx-auto"
-          src="img/Center.webp"
-          loading="lazy"
-          alt="naruto funko pop"
-        >
-      </div>
-
-      <div class="grid gap-4 lg:gap-6 flex-250">
-        <h2 class="font-bold uppercase text-2xl md:text-3xl lg:text-4xl">
-          Subscribe to our exclusive newsletter
-        </h2>
-        <p class="lg:text-xl">
-          So you'll stay on top of the news from the world of Funkos!
-        </p>
-        <form class="grid gap-4 lg:gap-4">
-          <input
-            class="w-5/6 bg-transparent border-white border-2 outline-none rounded-lg py-2 px-4 placeholder:text-white invalid:border-white valid:border-green-500"
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Email"
-            pattern="[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+"
-            required
-          >
-          <!--Campo correo: Solo puede tener letras, números, puntos, guiones y guion bajo. El símbolo arroba (@), luego letras, números, guiones. A continuación, el punto (.) y finalmente letras, números, puntos y guiones -->
-
-          <input
-            class="text-center rounded-3xl py-2 w-3/4 max-w-xs hover:bg-white hover:text-black bg-black text-white cursor-pointer capitalize border-2 border-white hover:border-black"
-            type="submit"
-            value="Subscribe"
-          >
-        </form>
-        <div class="flex gap-4 flex-wrap">
-          <img src="img/App-Store.webp" alt="logo app store" loading="lazy">
-          <img
-            src="img/Google-Play.webp"
-            alt="logo google play"
-            loading="lazy"
-          >
-        </div>
-      </div>
-    </section>
-
-    <footer id="contact" class="bg-black">
-      <div class="p-16 grid gap-4">
-        <a class="w-1/2 max-w-[150px]" href="https://funko-central.netlify.app/">
-          <img src="img/logo.svg" loading="lazy" alt="logo">
-        </a>
-
-        <div class="flex justify-between flex-wrap gap-8">
-          <div class="flex gap-8 justify-around h-[min-content]">
-            <a
-              rel="noopener"
-              href="tel:+99-99-9999-9999"
-              target="_blank"
-              class="link p-2.5 flex rounded-full bg-blue-600 h-max hover:bg-white"
-            >
-              <img
-                src="img/icon-phone.svg"
-                alt="icon phone"
-                class="block min-w-[30px] h-16"
-                loading="lazy"
-              >
-            </a>
-
-            <a
-              href="mailto:example@example.com"
-              class="link p-2.5 flex rounded-full bg-blue-600 h-max hover:bg-white"
-              rel="noopener"
-            >
-              <img
-                src="img/icon-email.svg"
-                alt="icon email"
-                loading="lazy"
-                class="block min-w-[30px] h-16"
-              >
-            </a>
-            <a
-              href="https://github.com/Matias-Paz"
-              target="_blank"
-              rel="noopener"
-              class="link p-2.5 flex rounded-full bg-blue-600 h-max hover:bg-white"
-            >
-              <img
-                src="img/instagram.svg"
-                alt="icon instagram"
-                loading="lazy"
-                class="block min-w-[30px] h-16"
-              >
-            </a>
-          </div>
-
-          <nav class="w-1/2 flex-[200px] max-w-xs">
-            <ul class="grid gap-2">
-              <li>
-                <a
-                  class="block hover:text-black hover:bg-white py-1 px-4 uppercase font-bold"
-                  href="#home"
-                  >home</a
-                >
-              </li>
-              <li>
-                <a
-                  class="block hover:text-black hover:bg-white py-1 px-4 uppercase font-bold"
-                  href="#collection"
-                  >collection</a
-                >
-              </li>
-              <li>
-                <a
-                  class="block hover:text-black hover:bg-white py-1 px-4 uppercase font-bold"
-                  href="#subscription"
-                  >subscription</a
-                >
-              </li>
-              <li>
-                <a
-                  class="block hover:text-black hover:bg-white py-1 px-4 uppercase font-bold"
-                  href="#contact"
-                  >contact</a
-                >
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-      <a
-        href="https://github.com/Matias-Paz"
-        target="_blank"
-        rel="noopener"
-        class="block text-center bg py-4 font-bold px-8 bg-gradient-to-r bg-blue-600"
-      >
-        &copy; 2023 Funko Central - MatiasDesign - All right reserved
-      </a>
-    </footer>
-  </body>
 </html>

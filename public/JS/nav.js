@@ -1,33 +1,26 @@
 // ----Variables------
-const body = document.querySelector('body'),
-  navItems = document.querySelectorAll('.nav-item'),
-  menuCheckbox = document.querySelector('#menu');
-
+const body = document.querySelector("body"),
+  navItems = document.querySelectorAll(".nav-item"),
+  menuCheckbox = document.querySelector("#menu");
 
 let ubicacionPrincipal = window.pageYOffset;
-let header = document.querySelector('header');
-const home = document.querySelector('#home');
+let header = document.querySelector("header");
+let nav = document.querySelector("nav");
+const home = document.querySelector("#home");
 
 // ----Eventos-------
-window.addEventListener('scroll', function () {
+window.addEventListener("scroll", function () {
+  let ubicacionActual = window.pageYOffset;
 
   if (home.getBoundingClientRect().bottom < 0) {
-  let ubicacionActual = window.pageYOffset;
-    
-    if (ubicacionPrincipal >= ubicacionActual) 
-    {
-      header.classList.remove("inset-down")
-      header.classList.remove("md:inset-down2")
-    } 
-    else 
-    {
+    if (ubicacionPrincipal >= ubicacionActual) {
+      header.classList.remove("inset-down");
+    } else {
       header.classList.add("inset-down");
-      header.classList.add("md:inset-down2");
-    };
-
-  ubicacionPrincipal = ubicacionActual;
-    
-  }; 
+    }
+    ubicacionPrincipal = ubicacionActual;
+  }
+  inputChecked();
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -35,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 navItems.forEach(function (item) {
-  item.addEventListener('click', inputChecked);
+  item.addEventListener("click", inputChecked);
 });
 
 // ----Funciones-------
@@ -49,14 +42,11 @@ function inputChecked() {
 function scrollNav() {
   const header = document.querySelector("header");
 
-  window.addEventListener('scroll', function () {
-    if (body.getBoundingClientRect().top < 0) 
-    {
+  window.addEventListener("scroll", function () {
+    if (body.getBoundingClientRect().top < 0) {
       header.classList.add("bg-black", "shadow-xl");
-    } 
-    else 
-    {
+    } else {
       header.classList.remove("bg-black", "shadow-xl");
     }
   });
-};
+}
